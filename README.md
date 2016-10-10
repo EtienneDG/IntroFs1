@@ -1,5 +1,5 @@
- F# Introduction
- ===============
+F# Introduction
+===============
 
 Principal characterisitcs
 -------------------------
