@@ -5,10 +5,14 @@ open FsUnit
 
 open Dojo
 
-// From here you should write your tests
+let [<Test>] ``convert s to f`` () =
+    encodeChar 's' |> shouldEqual 'f'
 
-let [<Test>] ``This is a passing test`` () =
-    isThisReallyTrue true |> shouldEqual true
+let [<Test>] ``from ascii to alphabet number for letter a`` () =
+    alphabetBasedNumber 97 |> shouldEqual 0
 
-let [<Test>] ``This is a failing test`` () =
-    isThisReallyTrue false |> shouldEqual false
+let [<Test>] ``from ascii to alphabet number for letter z`` () =
+    alphabetBasedNumber 123 |> shouldEqual 26
+
+let [<Test>] ``convert sample string`` () =
+    encodeStr "sample" |> shouldEqual "fnzcyr"
